@@ -1,0 +1,102 @@
+body{
+	height: 100vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* background-image: linear-gradient(pink, red); */
+	background: #ff7cd8; /* Old browsers */
+	background: -moz-linear-gradient(top, #ff7cd8 3%, #fba6e1 32%, #fd89d7 70%, #fcecfc 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ff7cd8 3%,#fba6e1 32%,#fd89d7 70%,#fcecfc 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ff7cd8 3%,#fba6e1 32%,#fd89d7 70%,#fcecfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7cd8', endColorstr='#fcecfc',GradientType=0 ); /* IE6-9 */
+}
+
+img{
+	/* Keep the image inside of the parent no matter what */
+	max-width: 100%;
+}
+
+/* Card is teh garandparent and needs perspective. */
+/* This doesn't make card 3d, it makes it 3d for everyone else. */
+.card{
+	perspective: 800px;
+	border: 2px solid black;
+	height: 300px;
+	align-content: center;
+	/* background-color: #712F31 */
+}
+
+/* Card-holder is the child, it is teh thing that will flip */
+/* I have 2 children, front and back, they do not flip... I do */
+.card-holder{
+	position: relative;
+	transform-style: preserve-3d; /* the grandchildren need to know they are 3d */	
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.card-front, .card-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+}
+
+.card-front{
+	transform: rotateY(180deg);
+}
+
+.card-back{
+	/* we are inside of css, go up one with ../ then down into images to get bw */
+	background: url('../images/background.jpeg') no-repeat 50% 50%;	
+	height: 300px;
+	width: 100%;
+}
+
+.flip{
+	transform: rotateY(-180deg);
+}
+
+.matched{
+    transform: rotateY(900deg);
+}
+
+.replay-message{
+    position: absolute;
+    left: 42%;
+    top: 25%;
+    display: none;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+	animation: fadein 2s;
+	z-index: 1;
+}
+
+@keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+   }
+
+#winner{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #ff7cd8;
+}
+
+.stage{
+	height: 100vh;
+	margin-top: 50px;
+	display: none;
+	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+	animation: fadein 2s;
+}

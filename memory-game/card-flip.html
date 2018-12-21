@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./card-flip.css" />
+    <!-- <script src="main.js"></script> -->
+</head>
+<body>
+    <h1>Card Flipping in CSS</h1>
+    <div class="card">
+        <div class="card-holder">
+            <div class="card-front">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mary-poppins-returns-emily-blunt-1520211134.jpg?resize=480:*" />
+            </div>
+            <div class="card-back">
+                <img src="https://c8.alamy.com/comp/FK164X/black-closed-umbrella-on-white-clipping-path-FK164X.jpg" />
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <label>Change Perspective</label>
+    <div id="parent">
+        <div id="threeD">
+            text 1
+        </div>
+        <div id="threeD2">
+            text 2
+        </div>
+        <div id="threeD3">
+            text 3
+        </div>
+    </div> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('.card-holder').click(function(){
+            $(this).toggleClass('flip')
+        })
+    </script>
+</body>
+</html>

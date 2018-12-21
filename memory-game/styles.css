@@ -1,0 +1,81 @@
+body{
+    background-color: #E8D1A6;
+}
+
+img{
+	/* Keep the image inside of the parent no matter what */
+	max-width: 100%;
+}
+
+/* Card is teh garandparent and needs perspective. */
+/* This doesn't make card 3d, it makes it 3d for everyone else. */
+.card{
+	perspective: 800px;
+	border: 2px solid black;
+	height: 300px;
+}
+
+/* Card-holder is the child, it is teh thing that will flip */
+/* I have 2 children, front and back, they do not flip... I do */
+.card-holder{
+	position: relative;
+	transform-style: preserve-3d; /* the grandchildren need to know they are 3d */	
+	transition: 1s all;
+	cursor: pointer;
+}
+
+.card-front, .card-back{
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+}
+
+.card-front{
+	transform: rotateY(180deg);
+}
+
+.card-back{
+	/* we are inside of css, go up one with ../ then down into images to get bw */
+	background: url('../images/logo-bw.png') no-repeat 50% 50%;	
+	height: 300px;
+	width: 100%;
+}
+
+.flip{
+	transform: rotateY(-180deg);
+}
+
+.matched{
+    transform: rotateY(880deg);
+}
+
+.replay-message{
+    position: absolute;
+    left: 42%;
+    top: 25%;
+    display: none;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+ from { opacity: 0; }
+ to   { opacity: 1; }
+}
+
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+   }
+
+#winner{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #712F31;
+}
+

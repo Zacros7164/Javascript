@@ -1,0 +1,29 @@
+/* body{
+    background-color: green;
+} */
+#container div{
+    display: flex;
+    justify-content: center;
+}
+
+.square {
+    background-color: #fff;
+    border: 2px solid #000;
+    width: 100px;
+    height: 100px;
+    outline-style: none;
+    font-size: 60px;
+}
+
+.square:hover{
+    background-color: #ff0;
+}
+
+#message{
+    font-size: 50px;
+    color: red;
+}
+
+.winning-square{
+    background-color: green;
+}

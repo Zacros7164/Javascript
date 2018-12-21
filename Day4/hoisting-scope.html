@@ -1,0 +1,114 @@
+<!-- Scope -->
+
+<!-- scope is a generic CS term -->
+<!-- -determines what can see a variable -->
+<!-- - GLOBAL
+-- has no parent
+--anyone can see it anywhere
+-- if it belongs to the window or is definied outside of ALL functions (just inside of a script tag), 
+it is global
+- Awesome for small programs or when necessary
+- Dangerous when your program gets large
+- in Python, globals are variables that are all the way to the left
+
+- LOCAL
+-- local variables live INSIDE of functions and are visible and changeable only to that function and it's child functions -->
+
+<script>
+    // this is not inside any function, so its a global
+    // var iAmAGlobal = 1;
+    // console.log(iAmAGlobal);
+    // // console.log(window.iAmAGlobal); same thing as above line because iAmAGlobal belongs to the window
+
+    // function checkScope() {
+    //     // in spite of this (horrible) variable name it is not a global
+    //     // its inside a function so nobody outside of this function can see or use it
+    //     var iAmAGlobal = 2;
+    //     iAmAGlobal++;
+    //     console.log(iAmAGlobal);
+
+    //     // DON'T EVER, unless you have a very good reason to, make a variable inside a function that you have a global variable for
+    //     // IT IS CONFUSING FOR THE DEVELOPER
+
+
+    // }
+
+    // checkScope();
+    // console.log(iAmAGlobal);
+
+
+
+    // var a = 1;
+    // function child() {
+    //     var b = 2;
+    //     console.log(a); //global
+    //     console.log(b); //local
+    //     for(var i = 0; i < 10; i++){
+    //         a++;
+    //     };
+    //     function grandchild(){
+    //         console.log(`I am a grandchild so I can see and change mystuff, my parents stuff, and their parents, stuff`)
+    //         a++
+    //         b++
+    //     };
+    //     grandchild();
+    //     console.log(a);
+    //     console.log(b);
+    // }
+
+    // child();
+
+
+    // states of a variable
+    // - undelcared = no var X anywhere
+    // - declared = JS knows it exists
+    // -init/ assigned = not only does it exist, but it has a value
+
+    // console.log(b); // error
+    // var b 
+    // console.log(b); // undefined
+    // b = 2;
+    // console.log(b); // 2
+
+
+    // HOISTING
+    // kinda unique to JS
+    // -Anytime you have the word var, JS will take the var and put it at the top of the function/global, whether you want it to or not
+
+    // var q = 1;
+    // function p() {
+    //     q++;
+    //     console.log(q); // log global, 1
+    //     var q = 3;
+    //     console.log(q);
+    // }
+
+    // p();
+
+    // JS got a facelift in 2015 that added "let" and "const" in addition to var
+
+    // let + const = no more need for var
+    // let is a block level variable
+    // it lives for as long as the {} its inside of does
+
+    var i
+    for(i = 0; i < 10; i ++){
+
+    }
+    console.log(i);
+
+    // for(let j = 0; j<10; j++) {
+
+    // }
+    // console.log(j)
+
+    // for(const k = 0; k<10; k++){
+
+    // }
+    // const = constant, once set, cannot be changed
+
+    // const playerName = prompt("What is your name?")
+    // playerName = "Joe" // will error out because it was already set as a const
+
+
+</script>

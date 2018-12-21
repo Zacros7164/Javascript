@@ -1,0 +1,40 @@
+jQuery is a Javascript Library
+that means jQuery IS Javascript
+jQuery CANNOT live without js
+
+jQuery allows you to change stuff, but doesn't keep track of the changes
+in a big app.... this gets CONFUSING!!!!!
+React, Angular, and Vue are the answer to this problem
+
+jQuery directly manipulates the DOM
+This is expensive - takes a lot of resources
+React and others use a "virtualDOM" which is efficient
+
+
+line 1- a $ means I'm writing JS, but not just any JS, I'm writing jQuery
+
+line 3- targeting stuff
+    native JS-
+        document.getElementByTagName('div')
+        document.getElementsByClassName('container')
+        document.querySelector('.container')
+
+    jQuery-
+        $('.container)
+        uses querySelector/CSS rules to traverse the DOM
+        $('#row p')
+
+line 11- 
+    jQuery targets with CSS rules
+    jQuery adds listeners as methods, i.e. click = .click()
+
+
+line 31- 
+    .css takes a JS Object
+    key is a string for any CSS property
+    value is what you want to apply
+
+
+line 55- 
+    fade toggle is the same as toggle but it adds an animated fade
+    arg 1 is number of ms

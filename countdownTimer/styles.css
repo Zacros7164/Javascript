@@ -1,0 +1,32 @@
+body {
+    /* background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTCkSahmNEnZ2FwK4FqOrsmvNYbKtoDr-Wpwlo4lN8ocS9QG-u') no-repeat center; */
+    background: url('https://mattsko.files.wordpress.com/2013/12/xmas4548.png') no-repeat center;
+    /* background: blue; */
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    text-align: center;
+
+}
+
+h1{
+    font-size: 40px;
+    margin: 40px 0px 0px;
+}
+
+.time-unit, .time-unit span {
+    display: inline-block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid green;
+    color: red;
+}
+
+.doomsday {
+    background: url('https://cdn.pixabay.com/photo/2017/06/30/19/52/apocalypse-2459465_960_720.jpg') no-repeat center;
+}
+
+.tester {
+    background: blue;
+}
