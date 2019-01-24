@@ -1,14 +1,18 @@
-/* body{
-    background-color: green;
-} */
+body{
+    background-color: blue;
+}
 #container div{
+    display: flex;
+    justify-content: center;
+}
+#game-board div{
     display: flex;
     justify-content: center;
 }
 
 .square {
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color: red;
+    border: 2px solid yellow;
     width: 100px;
     height: 100px;
     outline-style: none;
@@ -25,5 +29,8 @@
 }
 
 .winning-square{
-    background-color: green;
+    background-color: yellow;
+}
+#playAgain{
+    display: none;
 }
