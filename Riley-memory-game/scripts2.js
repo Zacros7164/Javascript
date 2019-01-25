@@ -36,7 +36,7 @@ function boardSet(){
             <div class="card col-sm-3 game-board">
                 <div class="card-holder">
                     <div class="card-front">${card}</div>
-                    <div class="card-back"></div>
+                    <div class="card-back"><img src="./images/background.jpeg" /></div>
                 </div>
             </div>
             `
